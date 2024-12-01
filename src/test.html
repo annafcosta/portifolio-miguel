@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Borda com uma cor só</title>
+    <style>
+
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap; /* Garante que as divs se ajustem caso o espaço seja insuficiente */ /* Espaçamento entre as divs */
+        }
+
+        .box {
+            flex: 1 1 200px; /* Cresce, encolhe e tem largura base de 200px */
+            max-width: 200px; /* Largura máxima para evitar esticamento excessivo */
+            min-width: 150px; /* Largura mínima para evitar que fique muito pequena */
+            height: 100px;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box">Div 1</div>
+    <div class="box">Div 2</div>
+    <div class="box">Div 3</div>
+    <div class="box">Div 4</div>
+</div>
+
+</body>
+</html>
+
