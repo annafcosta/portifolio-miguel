@@ -20,3 +20,11 @@ document.addEventListener("scroll", function () {
         socialMedia.classList.add("hidden");
     }
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const themeToggleButton = document.getElementById("theme-toggle");
+
+    themeToggleButton.addEventListener("click", function () {
+        document.body.classList.toggle("light-theme");
+    });
+});
