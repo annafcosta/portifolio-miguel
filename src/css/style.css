@@ -128,6 +128,11 @@ body {
     border-bottom: #76ABAE 1px solid;
 }
 
+.home_greeting_container {
+    margin-left: 400px;
+    margin-right: 400px;
+}
+
 .home_greeting_container h2 {
     font-size: 50px;
     color: #d6d6d6;
@@ -139,11 +144,12 @@ body {
     animation-fill-mode: both;
 }
 
-.name_animation span { display: inline-block }
+.name_animation span {
+    display: inline-block
+}
 
 .typing {
     display: inline-block;
-    width: 100%;
     overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid #76ABAE;
@@ -151,18 +157,24 @@ body {
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+        width: 0
+    }
+    to {
+        width: 70%
+    }
 }
+
 @keyframes cursor {
-    50% { border-color: transparent }
+    50% {
+        border-color: transparent
+    }
 }
 
 .home_greeting_container p {
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 25px;
     color: darkgrey;
-    margin-bottom: 60px;
+    margin: 30px 100px 60px 100px;
 }
 
 .home_greeting_container a {
@@ -189,24 +201,40 @@ body {
 @media (max-width: 768px) {
     #home {
         top: 0;
-        padding: 20px;
+        padding: 25px;
+        height: 80%;
     }
 
     .home_greeting_container h2 {
-        font-size: 30px;
+        font-size: 21px;
         top: 0;
     }
 
     .home_greeting_container p {
-        font-size: 16px;
+        font-size: 15px;
+        margin-right: 35px;
+        margin-left: 35px;
     }
 
     .home_greeting_container a {
         font-size: 18px;
         padding: 8px 15px;
     }
-}
 
+    @keyframes typing {
+        from {
+            width: 0
+        }
+        to {
+            width: 100%
+        }
+    }
+    @keyframes cursor {
+        50% {
+            border-color: transparent
+        }
+    }
+}
 
 /* SOCIAL ICON FORMATTING*/
 
@@ -252,12 +280,20 @@ body {
 }
 
 @media (max-width: 768px) {
+    .social_media img {
+        width: 25px;
+        height: auto;
+        opacity: 0.75;
+        transition: all 0.3s ease-in-out;
+    }
+
     .social_media {
         display: flex;
         position: fixed;
         top: 250px;
         left: 0;
         gap: 30px;
+        padding: 13px 13px 13px 13px;
     }
 }
 
@@ -332,6 +368,38 @@ body {
 #div_button button:hover {
     transform: scale(0.98);
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .about_title h3 {
+        font-size: 40px;
+        letter-spacing: 3px;
+        color: #d6d6d6;
+    }
+
+    .about_text p {
+        font-size: 20px;
+        justify-items: center;
+        margin-left: 110px;
+        margin-right: 110px;
+        margin-top: 10px;
+        color: darkgrey;
+    }
+
+    #div_button button {
+        display: inline-block;
+        position: relative;
+        font-size: 22px;
+        color: #222831;
+        font-weight: 500;
+        letter-spacing: 2px;
+        border: #76ABAE 2px solid;
+        background-color: #76ABAE;
+        border-radius: 40px;
+        padding: 8px 35px;
+        opacity: 0.8;
+        transition: all 0.3s ease-in-out;
+    }
 }
 
 /* Skills formating */
@@ -529,6 +597,21 @@ body {
 
 .box_contact:hover {
     transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .contact_title h3 {
+        font-size: 40px;
+        letter-spacing: 3px;
+        color: darkgrey;
+    }
+
+    .contact_title {
+        margin-top: 150px;
+        margin-bottom: 20px;
+    }
+
+
 }
 
 /* FOOTER FORMATTING */
