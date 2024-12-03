@@ -101,7 +101,7 @@ body {
 
 #home {
     display: flex;
-    background-color: #31363F;
+    background: linear-gradient(to right, #222831, #31363F);
     width: 100%;
     height: 90vh;
     justify-content: center;
@@ -116,6 +116,30 @@ body {
     font-size: 50px;
     color: #d6d6d6;
     letter-spacing: 2px;
+}
+
+.name_animation, .name_animation span {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.name_animation span { display: inline-block }
+
+.typing {
+    display: inline-block;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #76ABAE;
+    animation: typing 4s steps(24, end), cursor 1s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+@keyframes cursor {
+    50% { border-color: transparent }
 }
 
 .home_greeting_container p {
@@ -396,7 +420,7 @@ body {
     text-align: center;
     align-items: center;
     font-family: "Inter", sans-serif;
-    background-color: #222831;
+    background: linear-gradient(to right, #222831, #161A20);
     border-bottom: #76ABAE 1px solid;
     border-top: #76ABAE 1px solid;
 }
@@ -475,7 +499,7 @@ body {
 /* FOOTER FORMATTING */
 .container-footer {
     display: flex;
-    background-color: #1d232b;
+    background-color: #161A20;
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
