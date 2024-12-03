@@ -275,20 +275,54 @@ body {
     }
 }
 
-#theme-toggle {
+.theme-switch {
     position: absolute;
     bottom: 20px;
     right: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background: #333;
-    color: white;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
 }
 
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Slider */
+.theme-switch .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #222831;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+}
+
+.theme-switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    background-color: #76ABAE;
+    border-radius: 50%;
+    top: 3px;
+    left: 3px;
+    transition: transform 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #b2b2b2;
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
 
 /* SOCIAL ICON FORMATTING*/
 
