@@ -206,7 +206,7 @@ body {
     }
 
     .home_greeting_container h2 {
-        font-size: 30px;
+        font-size: 26px;
         top: 0;
     }
 
@@ -375,8 +375,9 @@ body {
     .about_text p {
         font-size: 20px;
         justify-items: center;
-        margin-left: 110px;
-        margin-right: 110px;
+        justify-content: center;
+        margin-left: 80px;
+        margin-right: 80px;
         margin-top: 10px;
         color: darkgrey;
     }
