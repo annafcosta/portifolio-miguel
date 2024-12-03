@@ -1,5 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@1,300&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 
+/* Variables for color */
+:root {
+    /* background color */
+    --home-color: linear-gradient(to right, #222831, #31363F);
+    --about-color: linear-gradient(to bottom, #31363F 35%, #222831 55%);
+    --projects-color: #222831;
+    --contact-color: linear-gradient(to right, #222831, #161A20);
+    --scroll-color: #2d323a;
+    --border-scroll: #161A20;
+
+    /* text color */
+    --title-color: #d6d6d6;
+    --p-color: darkgrey;
+}
+
+.light-theme {
+    /* background color */
+    --home-color: linear-gradient(to right, darkgray, #d6d6d6);
+    --about-color: linear-gradient(to bottom, #d6d6d6 35%, #b2b2b2 55%);
+    --projects-color: #b2b2b2;
+    --contact-color: linear-gradient(to right, #d6d6d6, #918f8f);
+    --scroll-color: darkgray;
+    --border-scroll: #918f8f;
+
+    /* text color */
+    --title-color: #212731;
+    --p-color: #31363F;
+}
+
+
 /* General formatting */
 
 body {
@@ -13,6 +43,7 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     overflow-y: scroll;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Scroll bar (track) */
@@ -22,13 +53,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: #2d323a;
+    background: var(--scroll-color);
+    transition: color 0.3s;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: #76ABAE;
     border-radius: 10px;
-    border: 2px solid #222831;
+    border: 2px solid var(--border-scroll);
 }
 
 .navbar {
@@ -39,7 +71,7 @@ body {
     background-color: #222831;
     padding: 20px 20px;
     height: 100px;
-    color: white;
+    color: #d6d6d6;
     position: fixed;
     z-index: 1000;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -117,7 +149,7 @@ body {
 
 #home {
     display: flex;
-    background: linear-gradient(to right, #222831, #31363F);
+    background: var(--home-color);
     width: 100%;
     height: 90vh;
     justify-content: center;
@@ -126,6 +158,11 @@ body {
     text-align: center;
     font-family: "Inter", sans-serif;
     border-bottom: #76ABAE 1px solid;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.home_greetings {
+    position: relative;
 }
 
 .home_greeting_container {
@@ -135,8 +172,9 @@ body {
 
 .home_greeting_container h2 {
     font-size: 50px;
-    color: #d6d6d6;
+    color: var(--title-color);
     letter-spacing: 2px;
+    transition: color 0.3s;
 }
 
 .name_animation, .name_animation span {
@@ -173,8 +211,9 @@ body {
 
 .home_greeting_container p {
     font-size: 25px;
-    color: darkgrey;
+    color: var(--p-color);
     margin: 30px 100px 60px 100px;
+    transition: color 0.3s;
 }
 
 .home_greeting_container a {
@@ -189,7 +228,7 @@ body {
     background-color: #76ABAE;
     border-radius: 40px;
     padding: 15px 25px;
-    opacity: 0.8;
+    opacity: 0.9;
     transition: all 0.3s ease-in-out;
 }
 
@@ -206,7 +245,7 @@ body {
     }
 
     .home_greeting_container h2 {
-        font-size: 26px;
+        font-size: 24px;
         top: 0;
     }
 
@@ -236,6 +275,21 @@ body {
     }
 }
 
+#theme-toggle {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
 /* SOCIAL ICON FORMATTING*/
 
 .social_media {
@@ -250,7 +304,7 @@ body {
     border: #76ABAE solid 2px;
     border-radius: 0 15px 15px 0;
     background-color: #76ABAE;
-    opacity: 0.7;
+    opacity: 0.85;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -303,7 +357,8 @@ body {
     text-align: center;
     align-items: center;
     font-family: "Inter", sans-serif;
-    background: linear-gradient(to bottom, #31363F 65%, #222831 65%);
+    background: var(--about-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .about_title {
@@ -314,7 +369,8 @@ body {
 .about_title h3 {
     font-size: 50px;
     letter-spacing: 3px;
-    color: #d6d6d6;
+    color: var(--title-color);
+    transition: color 0.3s;
 }
 
 .title-line {
@@ -333,7 +389,8 @@ body {
     margin-left: 140px;
     margin-right: 140px;
     margin-top: 10px;
-    color: darkgrey;
+    color: var(--p-color);
+    transition: color 0.3s;
 }
 
 #div_button {
@@ -369,7 +426,8 @@ body {
     .about_title h3 {
         font-size: 40px;
         letter-spacing: 3px;
-        color: #d6d6d6;
+        color: var(--title-color);
+        transition: color 0.3s;
     }
 
     .about_text p {
@@ -379,7 +437,8 @@ body {
         margin-left: 80px;
         margin-right: 80px;
         margin-top: 10px;
-        color: darkgrey;
+        color: var(--p-color);
+        transition: color 0.3s;
     }
 
     #div_button button {
@@ -402,6 +461,7 @@ body {
 
 .box_skill {
     background-color: #d6d6d6;
+    border: #d6d6d6 1px solid;
     border-radius: 15px;
     margin-top: 150px;
     font-family: "Inter", sans-serif;
@@ -455,13 +515,14 @@ body {
     margin-bottom: 30px;
     margin-left: 30px;
     margin-right: 30px;
+    color: #2d323a;
 }
 
 .box_skill p {
     font-size: 20px;
     justify-items: center;
     justify-content: center;
-    color: #1d2a2b;
+    color: #2d323a;
     line-height: 1.8;
     margin-left: 30px;
     margin-right: 30px;
@@ -505,7 +566,29 @@ body {
     text-align: center;
     align-items: center;
     font-family: "Inter", sans-serif;
-    background-color: #222831;
+    background-color: var(--projects-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.project_title {
+    margin-top: 150px;
+}
+
+.project_title h3 {
+    font-size: 50px;
+    letter-spacing: 3px;
+    color: var(--title-color);
+    transition: color 0.3s;
+}
+
+.project_title hr {
+    background-color: #76ABAE;
+    border: none;
+    border-radius: 5px;
+    height: 3px;
+    width: 30%;
+    margin: 10px auto;
+    opacity: 0.6;
 }
 
 /* CONTACT FORMATING */
@@ -519,9 +602,10 @@ body {
     text-align: center;
     align-items: center;
     font-family: "Inter", sans-serif;
-    background: linear-gradient(to right, #222831, #161A20);
+    background: var(--contact-color);
     border-bottom: #76ABAE 1px solid;
     border-top: #76ABAE 1px solid;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .contact_title {
@@ -532,7 +616,8 @@ body {
 .contact_title h3 {
     font-size: 50px;
     letter-spacing: 3px;
-    color: darkgrey;
+    color: var(--p-color);
+    transition: color 0.3s;
 }
 
 .contact_line {
@@ -542,7 +627,7 @@ body {
     height: 3px;
     width: 30%;
     margin: 10px auto;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 
@@ -558,7 +643,7 @@ body {
     height: 3px;
     width: 20%;
     margin: 10px auto;
-    opacity: 0.6;
+    opacity: 0.7;
 }
 
 #contact_container .col-md-3 {
@@ -575,11 +660,12 @@ body {
     border: 3px solid #76ABAE;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     background-color: #76ABAE;
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 #contact_container h4, p {
-    color: darkgrey;
+    color: var(--p-color);
+    transition: color 0.3s;
 }
 
 .box_contact a {
@@ -599,15 +685,14 @@ body {
     .contact_title h3 {
         font-size: 40px;
         letter-spacing: 3px;
-        color: darkgrey;
+        color: var(--p-color);
+        transition: color 0.3s;
     }
 
     .contact_title {
         margin-top: 150px;
         margin-bottom: 20px;
     }
-
-
 }
 
 /* FOOTER FORMATTING */
