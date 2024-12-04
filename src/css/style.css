@@ -13,6 +13,8 @@
     /* text color */
     --title-color: #d6d6d6;
     --p-color: darkgrey;
+
+    --opacity-image: 0.55;
 }
 
 .light-theme {
@@ -25,8 +27,10 @@
     --border-scroll: #918f8f;
 
     /* text color */
-    --title-color: #212731;
+    --title-color: #29303a;
     --p-color: #31363F;
+
+    --opacity-image: 0.8;
 }
 
 
@@ -241,7 +245,7 @@ body {
     #home {
         top: 0;
         padding: 25px;
-        height: 70%;
+        height: 80%;
     }
 
     .home_greeting_container h2 {
@@ -277,11 +281,11 @@ body {
 
 .theme-switch {
     position: absolute;
-    bottom: 20px;
-    right: 20px;
+    bottom: 25px;
+    right: 25px;
     display: inline-block;
-    width: 50px;
-    height: 25px;
+    width: 55px;
+    height: 29px;
     cursor: pointer;
 }
 
@@ -307,8 +311,8 @@ body {
 .theme-switch .slider:before {
     position: absolute;
     content: "";
-    height: 19px;
-    width: 19px;
+    height: 23px;
+    width: 23px;
     background-color: #76ABAE;
     border-radius: 50%;
     top: 3px;
@@ -694,7 +698,7 @@ input:checked + .slider:before {
     border: 3px solid #76ABAE;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     background-color: #76ABAE;
-    opacity: 0.6;
+    opacity: var(--opacity-image);
 }
 
 #contact_container h4, p {
