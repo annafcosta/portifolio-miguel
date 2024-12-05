@@ -195,7 +195,7 @@ body {
     overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid #76ABAE;
-    animation: typing 4s steps(24, end), cursor 1s step-end infinite;
+    animation: typing 3s steps(24, end), cursor 1s step-end infinite;
 }
 
 @keyframes typing {
@@ -472,8 +472,8 @@ input:checked + .slider:before {
         font-size: 20px;
         justify-items: center;
         justify-content: center;
-        margin-left: 80px;
-        margin-right: 80px;
+        margin-left: 50px;
+        margin-right: 50px;
         margin-top: 10px;
         color: var(--p-color);
         transition: color 0.3s;
@@ -496,7 +496,6 @@ input:checked + .slider:before {
 }
 
 /* Skills formating */
-
 .box_skill {
     background-color: #d6d6d6;
     border: #d6d6d6 1px solid;
@@ -610,6 +609,7 @@ input:checked + .slider:before {
 
 .project_title {
     margin-top: 150px;
+    margin-bottom: 100px;
 }
 
 .project_title h3 {
@@ -627,6 +627,76 @@ input:checked + .slider:before {
     width: 30%;
     margin: 10px auto;
     opacity: 0.6;
+}
+
+/* Projects images formating */
+
+.projects_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 80px;
+}
+
+.project {
+    position: relative;
+    display: inline-block;
+}
+
+.project img {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project img:hover {
+    transform: scale(1.02);
+    filter: blur(4px) brightness(0.7);
+}
+
+.project::after {
+    content: "Texto Personalizado"; /* Alterar para o texto desejado */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.project:hover::after {
+    opacity: 1;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .project img  {
+        width: 400px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+}
+
+@media (max-width: 480px) {
+    .project img {
+        width: 200px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
 }
 
 /* CONTACT FORMATING */
