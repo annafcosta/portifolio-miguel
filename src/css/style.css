@@ -20,7 +20,7 @@
 .light-theme {
     /* background color */
     --home-color: linear-gradient(to right, darkgray, #d6d6d6);
-    --about-color: linear-gradient(to bottom, #d6d6d6 35%, #b2b2b2 55%);
+    --about-color: linear-gradient(to bottom, #d3d3d3 35%, #b2b2b2 55%);
     --projects-color: #b2b2b2;
     --contact-color: linear-gradient(to right, #d6d6d6, #918f8f);
     --scroll-color: darkgray;
@@ -33,9 +33,7 @@
     --opacity-image: 0.8;
 }
 
-
 /* General formatting */
-
 body {
     margin: 0;
     height: 100vh;
@@ -289,7 +287,6 @@ body {
     cursor: pointer;
 }
 
-
 .theme-switch input {
     opacity: 0;
     width: 0;
@@ -502,8 +499,8 @@ input:checked + .slider:before {
     border-radius: 15px;
     margin-top: 150px;
     font-family: "Inter", sans-serif;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 60px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    margin-bottom: 100px;
 }
 
 .database {
@@ -601,6 +598,7 @@ input:checked + .slider:before {
     overflow: hidden;
     text-align: center;
     align-items: center;
+    border-top: #76ABAE 1px solid;
     font-family: "Inter", sans-serif;
     background-color: var(--projects-color);
     transition: background-color 0.3s, color 0.3s;
@@ -643,14 +641,14 @@ input:checked + .slider:before {
     position: relative;
     display: inline-block;
     overflow: hidden;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 
 .project .image_container img {
     display: block;
     width: 400px;
     height: auto;
-    border-radius: 12px;
+    border-radius: 8px;
     transition: transform 0.3s ease;
 }
 
@@ -671,7 +669,6 @@ input:checked + .slider:before {
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    border-radius: 12px;
 }
 
 .project .image_container:hover .overlay {
@@ -703,7 +700,7 @@ input:checked + .slider:before {
 
 @media (max-width: 768px) {
     .project img  {
-        width: 400px;
+        width: 300px;
         height: auto;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
