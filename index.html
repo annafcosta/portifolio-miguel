@@ -136,8 +136,6 @@
         </div>
     </div>
 </section>
-
-
 <section id="projects">
     <div class="project_title">
         <h3>PROJETOS</h3>
@@ -145,11 +143,13 @@
     </div>
     <div class="projects_container">
         <div class="project">
-            <div class="image_container">
-                <img src="./src/images/projects_images/tt-crimes.png" alt="Projeto 1">
-                <div class="overlay">
-                    <p>Projeto bla bla</p>
-                    <a href="#" target="_blank" class="button-link">Saiba Mais</a>
+            <div class="project">
+                <div class="image_container">
+                    <img src="./src/images/projects_images/tt-crimes.png" alt="Projeto 1">
+                    <div class="overlay">
+                        <p>CrimeTrack</p>
+                        <a class="read-more" data-target="popup1">Saiba Mais</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -157,8 +157,8 @@
             <div class="image_container">
                 <img src="./src/images/projects_images/bito.png" alt="Projeto 2">
                 <div class="overlay">
-                    <p>Projeto bla bla</p>
-                    <a href="#" target="_blank" class="button-link">Saiba Mais</a>
+                    <p>A Jornada de Bito</p>
+                    <a class="read-more" data-target="popup2">Saiba Mais</a>
                 </div>
             </div>
         </div>
@@ -167,13 +167,12 @@
                 <img src="./src/images/projects_images/tt-crimes.png" alt="Projeto 1">
                 <div class="overlay">
                     <p>Projeto bla bla</p>
-                    <a href="#" target="_blank" class="button-link">Saiba Mais</a>
+                    <a class="read-more">Saiba Mais</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-
 <section id="contact">
     <div class="contact_title">
         <h3>CONTATOS</h3>
@@ -219,6 +218,39 @@
         </ul>
         <p class="text-center">&copy; 2024. Made by Anna Ferreira</p>
     </footer>
+</div>
+
+<!-- Hidden Div -->
+<div id="overlay" class="hidden"></div>
+
+<div id="popup1" class="popup hidden">
+    <div class="title-project1">
+        <h5>CrimeTrack</h5>
+        <p>"Um conjunto de dados abrangente de tweets relacionados a crimes em português com informações de sentimento,
+            toxicidade e localização."</p>
+        <a href="https://huggingface.co/datasets/miguelribeirokk/crime_tweets_in_portuguese"
+           target="_blank" class="rm-project1">LER MAIS</a>
+    </div>
+    <div class="project1-text">
+        <p>This dataset contains 61.715 tweets related to possible crime reports, labeled with categories such as
+            "Assalto", "Roubo", "Furto", "Assédio", "Segurança Pública", "Homicídio, and "Outros", along with sentiment
+            analysis, toxicity analysis, and location identification.<br>
+            <br>A particular feature in the Portuguese language is that many words potentially related to crimes are
+            used in non-criminal contexts, such as "O árbitro assaltou meu time ontem" (which translates to "The referee
+            attacked my team yesterday" but in this case refers to something like a sports context, not an actual
+            crime). Therefore, the dataset includes a KEYWORD column: if the keyword column is marked as 1 and the CRIME
+            column is 0, this suggests the phrase may be ambiguous.<br>
+            <br>The dataset contains 5.000 tweets with actual crime reports, 5.000 with ambiguous expressions, and the
+            remaining tweets are unrelated.
+        </p>
+    </div>
+    <button class="close" type="button" data-target="popup1">Close</button>
+</div>
+
+<div id="popup2" class="popup hidden">
+    <button class="close" type="button" data-target="popup2">Close</button>
+    <h5>Popup 2</h5>
+    <p>This is the content of Popup 2.</p>
 </div>
 
 <script src="./src/js/script.js"></script>
