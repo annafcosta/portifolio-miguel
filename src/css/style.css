@@ -701,7 +701,7 @@ input:checked + .slider:before {
 
 @media (max-width: 768px) {
     .project img  {
-        width: 300px;
+        width: 200px;
         height: auto;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -898,7 +898,7 @@ input:checked + .slider:before {
 
 .project1-text p {
     font-size: 19px;
-    text-align: justify;
+    text-align: center;
     margin: 50px 90px 40px 90px;
     color: var(--p-color);
 }
@@ -918,8 +918,39 @@ input:checked + .slider:before {
 }
 
 .rm-project1:hover {
-    transform: scale(0.9);
+    transform: scale(0.95);
     opacity: 1;
+}
+
+@media (max-width: 768px) {
+    .popup h5 {
+        color: #76ABAE;
+        font-size: 40px;
+        font-weight: 500;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .title-project1 p {
+        font-size: 15px;
+        margin: 10px 10px 40px 10px;
+    }
+
+    .contact_title {
+        margin-top: 150px;
+        margin-bottom: 20px;
+    }
+
+    .project1-text p {
+        font-size: 16px;
+        text-align: center;
+        margin: 50px 10px 40px 10px;
+        color: var(--p-color);
+    }
+
+    .rm-project1 {
+        font-size: 16px;
+    }
 }
 
 
