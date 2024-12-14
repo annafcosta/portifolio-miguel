@@ -70,3 +70,9 @@ document.getElementById('overlay').addEventListener("click", () => {
         hidePopup(popup.id);
     }
 });
+
+// Function to make the div flip
+function toggleFlip() {
+    const card = document.getElementById('flipCard');
+    card.classList.toggle('flip');
+}
